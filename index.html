@@ -1,11 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Webpage</title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+
+
+<header id="top">
+    <nav aria-label="Page navigation">
+      <a href="#lists">Lists</a>
+      <a href="#media">Photo & Links</a>
+      <a href="#button">Button</a>
+      <a href="#table">Schedule</a>
+      <a href="#emojis">Emojis</a>
+      <a href="#form">Form</a>
+      <a href="#my-color">my-fav-color</a>
+    </nav>
+
+    <h1>Adilzhan Kadyrov</h1>
+    <h2>Group: SE-2433</h2>
+    <h3>About Me</h3>
+    <p>I am a student at AITU, interested in web development, </p>
+
+  </header>
+
+
+<section id="lists">
+    <h2>My Hobbies (ordered list)</h2>
+    <ol>
+      <li>Play piano</li>
+      <li>Cycling</li>
+      <li>Coding</li>
+    </ol>
+
+    <h2>Favorite Websites (unordered list)</h2>
+    <ul>
+      <li><a href="https://www.youtube.com" target="_blank" >YouTube</a></li>
+      <li><a href="https://github.com/" target="_blank" >Github</a></li>
+      <li><a href="https://appstorrent.ru/" target="_blank" >appstorrent</a></li>
+    </ul>
+  </section>
+
+<section id="media">
+    <h2>Photo & Links</h2>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKw3cPuZcpetVmMgnMN9Rk6BAbuv_sqmsPTg&s" alt="My photo" width="220"/>
+    <p>Useful links:
+      <a href="https://developer.mozilla.org" target="_blank">MDN HTML</a>,
+      <a href="" target="_blank">YouTube playlist</a>.
+    </p>
+  </section>
+
+
+  <section id="button">
+    <h2>Button</h2>
+    <button class="btn" type="button">button</button>
     
+
+<section id="table">
+    <h2>My Weekly Class Schedule</h2>
+    <table aria-label="Weekly schedule table">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Day</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Operating Systems</td>
+          <td>Monday</td>
+          <td>18:00–20:00</td>
+        </tr>
+        <tr>
+          <td>Web Technologies</td>
+          <td>Wednesday</td>
+          <td>18:00–20:00</td>
+        </tr>
+        <tr>
+          <td>Intro to Finance</td>
+          <td>Friday</td>
+          <td>20:00–21:00</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+<section id="emojis">
+    <h2>My Mood Today</h2>
+    <p>🌧️🛴😹</p>
+  </section>
+
+
+<section id="form">
+    <h2>Contact Form</h2>
+    <form action="#" method="get">
+      <p>
+        <label for="name">Name:</label><br />
+        <input id="name" name="name" type="text" placeholder="Enter your name" required />
+      </p>
+      <p>
+        <label for="email">Email:</label><br />
+        <input id="email" name="email" type="email" placeholder="qwerty@example.com" required />
+      </p>
+
+    <p>
+        <label for="color">Input Color:</label><br />
+        <input id="color" name="color" type="color" />
+      </p>
+
+      <p>
+        <button class="btn" type="submit">Submit</button>
+      </p>
+    </form>
+  </section>
+
+  <section id="my-color">
+    <h2>
+        My favorite color
+    </h2>
+    <div class="my-color"></div>
+  </section>
+
+
+
+<footer>
+    <h2>Publish</h2>
+    <p>Published website:
+      <a href="https://adilzhankad.github.io/web_technology_assignment/">GitHub Pages</a>
+    </p>
+    <p>© 2025, Adilzhan Kadyrov</p>
+  </footer>
+
 </body>
 </html>
+
+
+
+
+
