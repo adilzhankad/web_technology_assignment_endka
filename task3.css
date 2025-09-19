@@ -1,0 +1,143 @@
+
+
+body {
+  margin: 0;
+  font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1f2937;
+  background: #f7f7f7;
+}
+
+.my-website{
+      background:#fff;
+  text-align:center;
+  padding:18px 0 22px;
+  color:#6b7280;
+
+}
+
+
+.nav{
+  text-align:center;
+  background:#e7f1ff;
+  border-top:1px solid #d6e6ff;
+  border-bottom:1px solid #d6e6ff;
+  padding:10px 12px;
+}
+
+
+.tab{
+  display:inline-block;       
+  padding:8px 12px;
+  margin:0 6px 4px;
+  text-decoration:none;
+  color:#15325b;
+  background:#f5f9ff;
+  border:1px solid transparent;
+  border-radius:10px;
+}
+.tab:hover{
+  background:#ffffff;
+  border-color:#cfe0ff;
+  text-decoration:none;
+}
+
+.container { max-width: 960px; margin: 0 auto; }
+
+
+#page-title {
+  text-align: center;
+  color: #0b1020;
+  font-weight: 800;
+  font-size: 28px;
+  margin: 8px 0 20px;
+}
+
+
+.table-wrap { 
+    background:#fff;
+     border:1px solid #e6e8ef;
+      border-radius:12px;
+    
+        padding:12px; 
+    }
+table {
+     width:100%;
+      border-collapse:collapse; 
+    }
+
+th, td {
+  border:1px solid #d7dbe6;
+  padding:12px 10px;
+  text-align:center;
+  
+}
+ 
+.highlight-row td { 
+    background:#e6f2ff; 
+    color:#0b56a3;
+     font-weight:700; 
+    } 
+
+.form-card {
+  width: 520px;             
+  margin: 24px auto;
+  background: #ffffff;
+  border: 1px solid #e6e8ef;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(15,23,42,.08);
+  padding: 22px 18px;
+}
+.form-card h2 { 
+    margin: 0 0 12px;
+     font-size: 22px;
+    font-weight: 800;
+    color:#0b1020; 
+}
+
+.form-row { 
+    margin: 12px 0; 
+}
+
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width:90%;
+  padding:10px 12px;
+  border:1px solid #cfd6e4;
+  border-radius:10px;
+  background:#f9fafc;
+  color:#111827;
+}
+
+
+.radio { margin-right: 14px; display: inline-block; }
+
+.btn {
+
+  width:100%;
+  margin-top: 6px;
+  padding:12px 14px;
+  border:0;
+  border-radius:12px;
+  background:#137fec;
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+
+  
+}
+.btn:hover { background:#0d6bc9;}
+
+
+.site-footer{
+
+    border-top:1px solid #e6e8ef;
+  background:#fff;
+  text-align:center;
+  padding:18px 0 22px;
+  color:#6b7280;
+
+
+}
