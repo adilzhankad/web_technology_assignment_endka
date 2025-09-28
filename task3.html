@@ -1,110 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Student Grades and Feedback</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="task3.css" />
+  <meta charset="UTF-8">
+  <title>Portfolio Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
 
-        <div class="my-website">
-      Assigment2
-    </div>
-
-            <div class="nav">
-      <a class="tab active" href="index.html">task 1</a>
-      <a class="tab" href="task2.html">task 2</a>
-      <a class="tab" href="task3.html">task 3</a>
-
-    </div>
-
-    <h1 id="page-title">Student Grades and Feedback</h1>
+<header class="navbar">
+  <div class="logo"><img src="hd-spiderman-black-spider-logo-png-701751694782265weoydtdqxi.svg" alt="logo"></div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Flexbox</a></li>
+      <li><a href="task2.html">Grid</a></li>
+      <li><a href="task3.html">Portfolio</a></li>
+    </ul>
+  </nav>
+</header>
 
 
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Subject</th>
-            <th scope="col">Grade</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Adil</td>
-            <td>Math</td>
-            <td>A</td>
-          </tr>
-          <tr>
-            <td>Roma</td>
-            <td>Science</td>
-            <td>B</td>
-          </tr>
+  <div class="portfolio-grid">
+    <section class="projects">
 
-          <tr class="highlight-row">
-            <td>Era</td>
-            <td colspan="2">English — C (Highlighted)</td>
-          </tr>
+      <div class="project-card">
+        <h3>Kaizu-app</h3>
+        <p>Startup idea</p>
+        <button>View</button>
+      </div>
+            <div class="project-card">
+        <h3>Telegram bots</h3>
+        <p>telegram bots for ENU.</p>
+        <button>View</button>
+      </div>
+      <div class="project-card">
+        <h3>Aik suppurt</h3>
+        <p>time saving product.</p>
+        <button>View</button>
+      </div>
+    </section>
 
-          <tr>
-            <td rowspan="2">Diana</td>
-            <td>History</td>
-            <td>A</td>
-          </tr>
-          <tr>
-            <td>Art</td>
-            <td>A</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-
-    <div id="feedback-form" class="form-card">
-      <h2>Feedback Form</h2>
-      <form action="#" method="post">
-        <div class="form-row">
-          <label for="name"><strong>Name</strong></label>
-          <input id="name" name="name" type="text" placeholder="Enter your name" />
-        </div>
-
-        <div class="form-row">
-          <label for="email"><strong>Email</strong></label>
-          <input id="email" name="email" type="email" placeholder="Enter your email" />
-        </div>
-
-        <div class="form-row">
-          <label for="role"><strong>Role</strong></label>
-          <br>
-          <select id="role" name="role">
-            <option>Select your role</option>
-            <option>Student</option>
-            <option>Parent</option>
-            <option>Teacher</option>
-            <option>Other</option>
-          </select>
-        </div>
-
-
-
-        <div class="form-row">
-          <label for="comments"><strong>Comments</strong></label>
-          <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments"></textarea>
-        </div>
-
-        <button type="submit" class="btn">Submit</button>
-      </form>
-    </div>
-      <div class="site-footer">
-    Adilzhan Kadyrov
-
-  </div>
+    <aside class="portfolio-sidebar">
+      <h3>About Me</h3>
+      <p>im mostly frontend and Back, but really interested in ML and AI</p>
+    </aside>
   </div>
 
-  
+
+  <footer class="grid-footer">© 2025 My Portfolio</footer>
 
 </body>
 </html>

@@ -1,82 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Stitch Design — TechBlog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Flexbox Tasks</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
 
 
-  <div class="site-header">
+<header class="navbar">
+  <div class="logo"><img src="hd-spiderman-black-spider-logo-png-701751694782265weoydtdqxi.svg" alt="logo"></div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Flexbox</a></li>
+      <li><a href="task2.html">Grid</a></li>
+      <li><a href="task3.html">Portfolio</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <div class="my-website">
-      Assigment2
+<div class="h1-film">
+<h1>My Favorite films</h1>
+</div>
+
+
+
+  <section class="card-row">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/ru/b/b9/Intouchables.jpg" alt="Card 1">
+      <h3>1 + 1</h3>
+      <p>Some text for card 1.</p>
+      <button>Read More</button>
     </div>
-
-
-              <div class="nav">
-      <a class="tab active" href="index.html">task 1</a>
-      <a class="tab" href="task2.html">task 2</a>
-      <a class="tab" href="task3.html">task 3</a>
-
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Card 2">
+      <h3>Interstallar</h3>
+      <p>Some text for card 2.</p>
+      <button>Read More</button>
     </div>
-
-
-
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/ru/7/7a/Spider-Man_3%2C_International_Poster.jpg" alt="Card 3">
+      <h3>Spider-Man 3: Enemy in the Reflection</h3>
+      <p>Some text for card 3.</p>
+      <button>Read More</button>
     </div>
-
-
-
-
-  <div class="container page">
-    <div class="layout clearfix">
-
-      <div class="sidebar">
-        <div class="card">
-          <div class="card-h">Menu</div>
-          <div class="card-b">
-            <a href="#" class="menu-link is-current">Menu Item 1</a>
-            <a href="#" class="menu-link">Menu Item 2</a>
-            <a href="#" class="menu-link">Menu Item 3</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Content -->
-      <div class="content">
-        <div class="card">
-          <div class="card-b">
-            <h2 class="h2">Main Content</h2>
-            <p class="lead">
-              This is the main content area. It contains a heading and a short paragraph describing the content.
-              The content is positioned to the right of the sidebar menu.
-            </p>
-
-            <div class="divider"></div>
-
-            <h2 class="h2">Aside Content</h2>
-            <p>
-              This is the aside content area. It contains a heading and a short paragraph describing the content.
-              The layout here is built with simple HTML and CSS (no Tailwind, no frameworks).
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="site-footer">
-    Adilzhan Kadyrov
-
-  </div>
+  </section>
 
 </body>
 </html>
