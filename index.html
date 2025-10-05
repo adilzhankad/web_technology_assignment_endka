@@ -1,50 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Flexbox Tasks</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Part 1 — Responsive</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="hd-spiderman-black-spider-logo-png-701751694782265weoydtdqxi.svg" alt="Logo" width="90" height="auto">
 
+    </a>
 
-<header class="navbar">
-  <div class="logo"><img src="hd-spiderman-black-spider-logo-png-701751694782265weoydtdqxi.svg" alt="logo"></div>
-  <nav>
-    <ul class="nav-links">
-      <li><a href="index.html">Flexbox</a></li>
-      <li><a href="task2.html">Grid</a></li>
-      <li><a href="task3.html">Portfolio</a></li>
-    </ul>
-  </nav>
-</header>
+    <input id="nav-toggle" type="checkbox" class="nav-toggle" aria-label="Open menu">
+    <label for="nav-toggle" class="burger" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
 
-<div class="h1-film">
-<h1>My Favorite films</h1>
-</div>
+    <nav class="nav">
+      <a href="index.html" class="active">Part 1</a>
+      <a href="task2.html">Part 2</a>
+      <a href="task3.html">Part 3</a>
+    </nav>
+  </header>
 
+  <main class="wrap">
+    <section class="block">
+      <h2>Typography</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere, purus eget condimentum sagittis, velit lectus lobortis lorem, nec fermentum nisl nisl ut ipsum.</p>
+      <p>Curabitur dignissim, leo quis maximus pulvinar, augue dui gravida lectus, non iaculis ipsum sapien nec dolor. Aliquam erat volutpat.</p>
+    </section>
 
+    <section class="block">
+      <h2>Three-card Grid</h2>
+      <div class="grid">
+        <div class="tile">First</div>
+        <div class="tile">Second</div>
+        <div class="tile">Third</div>
+      </div>
+      <ul class="note">
+        <li>Desktop: three in a row</li>
+        <li>Tablet: two on the first row, one below</li>
+        <li>Mobile: stacked one by one</li>
+      </ul>
+    </section>
+  </main>
 
-  <section class="card-row">
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/ru/b/b9/Intouchables.jpg" alt="Card 1">
-      <h3>1 + 1</h3>
-      <p>Some text for card 1.</p>
-      <button>Read More</button>
-    </div>
-    <div class="card">
-      <img src="https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Card 2">
-      <h3>Interstallar</h3>
-      <p>Some text for card 2.</p>
-      <button>Read More</button>
-    </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/ru/7/7a/Spider-Man_3%2C_International_Poster.jpg" alt="Card 3">
-      <h3>Spider-Man 3: Enemy in the Reflection</h3>
-      <p>Some text for card 3.</p>
-      <button>Read More</button>
-    </div>
-  </section>
-
+  <footer class="foot">© 2025 Adilzan Kadyrov</footer>
 </body>
 </html>
