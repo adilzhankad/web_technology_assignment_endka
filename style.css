@@ -1,5 +1,4 @@
 
-/* Палитра под себя — спокойно и без шума */
 :root{
   --bg: #fafafa;
   --ink: #1f2328;
@@ -45,22 +44,15 @@ body{
   font-size: 13px;
 }
 
-/* Контент */
-.wrap{
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 18px;
-}
-.block + .block{ margin-top: 22px; }
 
 h2{
   margin: 0 0 10px;
-  font-size: 18px; /* mobile подзаголовок */
+  font-size: 18px; 
 }
 
 p{ margin: 0 0 12px; }
 
-/* Сетка (без Bootstrap): mobile-first — одна колонка */
+
 .grid{
   display: grid;
   grid-template-columns: 1fr;
@@ -130,6 +122,8 @@ p{ margin: 0 0 12px; }
 
 /* Mobile: меню под бургер */
 @media (max-width: 767.98px){
+
+  p{content-visibility: hidden};
   .nav{ 
     position:absolute; left:0; right:0; top:64px;
     background:var(--card); border-top:1px solid var(--line);
@@ -144,6 +138,79 @@ p{ margin: 0 0 12px; }
 @media (min-width: 768px){
   .nav{ display:flex; position:static; background:transparent; border:none; padding:0; }
   .burger{ display:none; }
+}
+
+
+main{
+  display: flex;
+  justify-content: center;
+}
+
+
+.form-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0d6efd;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13,110,253,0.3);
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0b5ed7;
+}
+
+
+input:invalid, textarea:invalid {
+  border-color: #dc3545;
+}
+
+input:valid, textarea:valid {
+  border-color: #198754;
 }
 
 

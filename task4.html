@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create an Account (Minimal CSS, Wider Form)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    
+    <style>
+        
+        :root {
+            --bs-primary: #13a4ec; 
+            --bs-primary-rgb: 19, 164, 236;
+        }
+
+        .page-background {
+ 
+
+            backdrop-filter: blur(5px);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-blur {
+            background-color: var(--bs-body-bg-rgb); 
+            backdrop-filter: blur(10px); 
+        }
+
+        .input-group-icon .form-control {
+            padding-left: 2.5rem; 
+        }
+        .input-group-icon .material-symbols-outlined {
+            position: absolute;
+            top: 50%;
+            left: 0.75rem; 
+            transform: translateY(-50%);
+            color: var(--bs-secondary-color); 
+            pointer-events: none;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body class="p-3 font-inter">
+
+<div class="page-background container-fluid">
+    
+    <div class="row justify-content-center w-100 py-5">
+        <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xl-8">
+            <div class="card shadow-lg border-0 rounded-4 p-5 p-sm-6 card-blur bg-opacity-75">
+                <div class="mb-4 text-center">
+                    <h1 class="h3 fw-bold text-body">Create an Account</h1>
+                </div>
+
+                <form id="registrationForm" class="row g-4">
+                    <div class="col-12 col-sm-6">
+                        <label for="first-name" class="form-label text-body fw-medium">First Name</label>
+                        <div class="position-relative input-group-icon">
+                            <span class="material-symbols-outlined fs-5">person</span>
+                            <input type="text" class="form-control rounded-lg" id="first-name" name="firstName" placeholder="Enter your first name" required>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="last-name" class="form-label text-body fw-medium">Last Name</label>
+                        <div class="position-relative input-group-icon">
+                            <span class="material-symbols-outlined fs-5">person</span>
+                            <input type="text" class="form-control rounded-lg" id="last-name" name="lastName" placeholder="Enter your last name" required>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="form-label text-body fw-medium">Email</label>
+                        <div class="position-relative input-group-icon">
+                            <span class="material-symbols-outlined fs-5">mail</span>
+                            <input type="email" class="form-control rounded-lg" id="email" name="email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="password" class="form-label text-body fw-medium">Password</label>
+                        <div class="position-relative input-group-icon">
+                            <span class="material-symbols-outlined fs-5">lock</span>
+                            <input type="password" class="form-control rounded-lg" id="password" name="password" minlength="8" placeholder="Enter a strong password" required>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="confirm-password" class="form-label text-body fw-medium">Confirm Password</label>
+                        <div class="position-relative input-group-icon">
+                            <span class="material-symbols-outlined fs-5">lock</span>
+                            <input type="password" class="form-control rounded-lg" id="confirm-password" name="confirmPassword" placeholder="Confirm your password" required>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <p class="form-label text-body fw-medium mb-2">Gender</p>
+                        <div class="d-flex flex-wrap gap-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male">
+                                <label class="form-check-label text-body-secondary" for="genderMale">Male</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
+                                <label class="form-check-label text-body-secondary" for="genderFemale">Female</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="genderOther" value="Other">
+                                <label class="form-check-label text-body-secondary" for="genderOther">Other</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <p class="form-label text-body fw-medium mb-2">Hobbies</p>
+                        <div class="row g-2">
+                            <div class="col-6 col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input rounded" type="checkbox" name="hobbies" id="hobbyReading" value="Reading">
+                                    <label class="form-check-label text-body-secondary" for="hobbyReading">Reading</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input rounded" type="checkbox" name="hobbies" id="hobbySports" value="Sports">
+                                    <label class="form-check-label text-body-secondary" for="hobbySports">Sports</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input rounded" type="checkbox" name="hobbies" id="hobbyMusic" value="Music">
+                                    <label class="form-check-label text-body-secondary" for="hobbyMusic">Music</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input rounded" type="checkbox" name="hobbies" id="hobbyTraveling" value="Traveling">
+                                    <label class="form-check-label text-body-secondary" for="hobbyTraveling">Traveling</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="country" class="form-label text-body fw-medium">Country</label>
+                        <select class="form-select rounded-lg" id="country" name="country">
+                            <option>Kazakhstan</option>
+                            <option>Canada</option>
+                            <option>United Kingdom</option>
+                            <option>Australia</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 mt-4 d-flex justify-content-end gap-3">
+                        <button class="btn btn-lg btn-secondary px-4 fw-medium" type="reset">Reset</button>
+                        <button class="btn btn-lg btn-primary px-5 fw-medium" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="position-absolute bottom-0 start-50 translate-middle-x p-3">
+        <p class="text-white opacity-75 mb-0 text-center small">2025 Web – Adilzan</p>
+    </footer>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('registrationForm');
+        const passwordField = document.getElementById('password');
+        const confirmPasswordField = document.getElementById('confirm-password');
+        
+        if (form) {
+            form.addEventListener('submit', function(event) {
+                const password = passwordField.value;
+                const confirmPassword = confirmPasswordField.value;
+                
+   
+                if (password !== confirmPassword) {
+                    event.preventDefault(); 
+                    alert('Ошибка: Пароли не совпадают! Пожалуйста, проверьте их.');
+                    confirmPasswordField.focus();
+                    
+        
+                    return; 
+                } 
+                
+       
+                event.preventDefault(); 
+
+                console.log('--- Данные формы регистрации (Пароли совпадают): ---');
+                
+
+                const formData = new FormData(form);
+                const hobbies = [];
+
+                formData.forEach((value, key) => {
+          
+                    if (key === 'hobbies') {
+                        hobbies.push(value);
+                    } else {
+                        console.log(`${key}: ${value}`);
+                    }
+                });
+                
+      
+                console.log(`hobbies: ${hobbies.join(', ')}`);
+                console.log('-----------------------------------');
+            });
+        }
+    });
+</script>
+</body>
+</html>
