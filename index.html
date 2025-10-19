@@ -1,48 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Part 1 — Responsive</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 6 — JavaScript + Bootstrap Redesign</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Уменьшаем общие отступы сверху/снизу для более компактного вида */
+    body { padding: 20px 0; background-color: #f8f9fa; /* Светло-серый фон */ }
+    
+    /* Стили для карточек */
+    .section-card { margin-bottom: 25px; border: none; transition: transform 0.2s; }
+    .section-card:hover { transform: translateY(-3px); }
+
+
+    #colorBox { 
+      width: 100px; 
+      height: 100px; 
+      background: #adb5bd; /* Темный светло-серый */
+      margin: 10px auto; 
+      border-radius: 50%; /* Круглая форма */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: background 0.3s; 
+    }
+
+    /* Стиль для завершенных элементов в To-Do List (если он используется) */
+    #todoList li.completed { 
+      text-decoration: line-through; 
+      color: #6c757d; /* Серый цвет текста */
+      background-color: #e9ecef; /* Светло-серый фон */
+    }
+  </style>
 </head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="index.html">
-      <img src="hd-spiderman-black-spider-logo-png-701751694782265weoydtdqxi.svg" alt="Logo" width="90" height="auto">
+<body class="bg-light">
+  <div class="container my-5">
+    <header class="text-center mb-5">
 
-    </a>
-
-    <input id="nav-toggle" type="checkbox" class="nav-toggle" aria-label="Open menu">
-    <label for="nav-toggle" class="burger" aria-hidden="true">
-      <span></span><span></span><span></span>
-    </label>
-
-    <nav class="nav">
-      <a href="index.html" class="active">Part 1</a>
-      <a href="task2.html">Part 2</a>
-      <a href="task3.html">Part 3</a>
-    </nav>
-  </header>
-
-  <main class="main">
-  <div class="form-container">
-    <h2>Contact Us</h2>
-    <form action="#" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your full name">
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="example@mail.com">
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">JS Assignment</a>
+    <div>
+      <a class="btn btn-outline-light btn-sm me-2" href="index.html">Main Tasks</a>
+      <a class="btn btn-outline-light btn-sm" href="task8.html">To-Do List</a>
+    </div>
   </div>
-  </main>
+</nav>
 
-  <footer class="foot">2025 Adilzan Kadyrov</footer>
+
+      <hr class="w-50 mx-auto">
+    </header>
+
+    <div class="row justify-content-center">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="section-card card p-4 shadow">
+          <h4 class="card-title text-info">Task 2: Content</h4>
+          <p id="paragraph" class="text-muted">adil</p>
+          <button class="btn btn-info mt-2" onclick="changeText()">Replace Text</button>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="section-card card p-4 shadow">
+          <h4 class="card-title text-success">Task 3: Styles</h4>
+<div id="styleBox" class="p-3 border rounded text-center fw-bold ">
+  Styled Box Example
+</div>
+
+          <div class="mt-3 d-flex justify-content-between">
+            <button class="btn btn-outline-success btn-sm flex-fill me-2"  onclick="changeColor()">Change Color</button>
+            <button class="btn btn-outline-warning btn-sm flex-fill" onclick="changeFont()">Change Size</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="section-card card p-4 shadow">
+          <h4 class="card-title text-danger">Task 4: Elements</h4>
+          <ul id="itemList" class="list-group list-group-flush mb-3 border rounded">
+            <li class="list-group-item">Item 1 (Click to remove)</li>
+          </ul>
+          <div class="btn-group" role="group">
+            <button class="btn btn-outline-primary btn-sm" onclick="addItem()">Add New</button>
+            <button class="btn btn-outline-danger btn-sm" onclick="removeItem()">Remove Last</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center mt-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="section-card card p-4 text-center shadow">
+          <h4 class="card-title text-primary">Task 5: Mouse</h4>
+          <div id="colorBox" class="mx-auto my-3"></div>
+          <p class="text-muted small">Hover mouse over the circle to change its color.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="section-card card p-4 shadow">
+          <h4 class="card-title text-secondary">Task 6: Keyboard</h4>
+          <input type="text" id="liveInput" class="form-control form-control-lg mb-3" placeholder="Type here...">
+          <p class="mb-0 fw-bold">Live Output:</p>
+          <p id="liveOutput" class="text-primary fs-5"></p>
+        </div>
+      </div>
+      
+      <div class="col-md-8 col-lg-4">
+        <div class="section-card card p-4 shadow">
+          <h4 class="card-title text-warning">Task 7: Calculator</h4>
+          <div class="row g-2 mb-3">
+            <div class="col"><input type="number" id="num1" class="form-control" placeholder="Number 1"></div>
+            <div class="col"><input type="number" id="num2" class="form-control" placeholder="Number 2"></div>
+          </div>
+          <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-outline-dark" onclick="calculate('+')">+</button>
+            <button class="btn btn-outline-dark" onclick="calculate('-')">-</button>
+            <button class="btn btn-outline-dark" onclick="calculate('*')">×</button>
+            <button class="btn btn-outline-dark" onclick="calculate('/')">÷</button>
+          </div>
+          <p id="calcResult" class="mt-3 fs-4 fw-bold text-center text-dark">Result: <span class="text-primary">0</span></p>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+
+  <script src="script.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

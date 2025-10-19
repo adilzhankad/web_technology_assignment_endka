@@ -1,229 +1,99 @@
-
-:root{
-  --bg: #fafafa;
-  --ink: #1f2328;
-  --muted: #667085;
-  --card: #ffffff;
-  --line: #e6e8ec;
-}
-
-html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
-
-body{
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--ink);
-  background: var(--bg);
-  line-height: 1.6;
-  font-size: 14px; /* mobile базовый размер */
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* Верх и низ */
-.topbar{
-  padding: 16px 18px;
-  background: var(--card);
-  border-bottom: 1px solid var(--line);
-}
-.topbar h1{
-  margin: 0 0 6px;
-  font-size: 22px; /* mobile заголовок */
-  font-weight: 700;
-}
-.sub{
-  margin: 0;
-  color: var(--muted);
-}
-
-.foot{
-  padding: 16px 18px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  text-align: center;
-  background: var(--card);
-  font-size: 13px;
-}
-
-
-h2{
-  margin: 0 0 10px;
-  font-size: 18px; 
-}
-
-p{ margin: 0 0 12px; }
-
-
-.grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.tile{
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 22px;
-  text-align: center;
-  font-weight: 600;
-}
-
-.note{
-  margin: 12px 0 0;
-  padding-left: 18px;
-  color: var(--muted);
-}
-
-/* === Tablet ≥ 768px === */
-@media (min-width: 768px){
-  body{ font-size: 16px; } /* увеличиваем базу */
-  .topbar h1{ font-size: 26px; }
-  h2{ font-size: 20px; }
-  .grid{ grid-template-columns: 1fr 1fr; } /* 2 в ряд, третья — ниже */
-}
-
-/* === Desktop ≥ 992px === */
-@media (min-width: 992px){
-  body{ font-size: 17.5px; } /* не слишком крупно, но заметно */
-  .topbar h1{ font-size: 30px; }
-  h2{ font-size: 22px; }
-  .grid{ grid-template-columns: 1fr 1fr 1fr; } /* 3 в ряд */
-}
-
-
-/* --- NAV --- */
-.topbar{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:12px; position:sticky; top:0; z-index:10;
-}
-.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); }
-.brand span{ font-weight:700; letter-spacing:.2px; }
-
-/* ссылки */
-.nav { display:flex; align-items:center; gap:14px; }
-.nav a{
-  text-decoration:none; color:var(--ink); padding:8px 10px; border-radius:8px;
-  border:1px solid transparent; transition:background .15s ease, border-color .15s ease;
-  font-weight:600; font-size:14px;
-}
-.nav a:hover{ background: #f2f4f7; border-color: var(--line); }
-.nav a.active{ background:#eef2ff; border-color:#c7d2fe; }
-
-/* бургер (mobile-first скрываем меню) */
-.nav-toggle{ display:none; }
-.burger{
-  width:38px; height:38px; border-radius:10px; border:1px solid var(--line);
-  display:none; align-items:center; justify-content:center; cursor:pointer; background:var(--card);
-}
-.burger span{
-  display:block; width:20px; height:2px; background:var(--ink); margin:3px 0;
-}
-
-/* Mobile: меню под бургер */
-@media (max-width: 767.98px){
-
-  p{content-visibility: hidden};
-  .nav{ 
-    position:absolute; left:0; right:0; top:64px;
-    background:var(--card); border-top:1px solid var(--line);
-    display:none; flex-direction:column; padding:10px;
-  }
-  .burger{ display:flex; }
-  /* показать меню при чекнутом бургерe */
-  .nav-toggle:checked ~ .nav{ display:flex; }
-}
-
-/* Tablet+Desktop: обычная горизонтальная навигация */
-@media (min-width: 768px){
-  .nav{ display:flex; position:static; background:transparent; border:none; padding:0; }
-  .burger{ display:none; }
-}
-
-
-main{
+body {
+  background: linear-gradient(135deg, #8e9eab, #eef2f3);
+  min-height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-
-.form-container {
-  margin-top: 100px;
-  margin-bottom: 100px;
-
-  background: #fff;
-  padding: 30px 40px;
-  border-radius: 12px;
+.container {
+  background: white;
+  width: 400px;
+  padding: 30px;
+  border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 420px;
 }
 
-h2 {
+h1 {
   text-align: center;
-  margin-bottom: 25px;
-  color: #0d6efd;
-}
-
-label {
-  display: block;
-  margin-bottom: 6px;
   color: #333;
-  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 18px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
-  transition: all 0.2s ease;
+.input-area {
+  display: flex;
+  gap: 10px;
 }
 
-input:focus, textarea:focus {
-  border-color: #0d6efd;
-  box-shadow: 0 0 5px rgba(13,110,253,0.3);
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+#taskInput:focus {
+  border-color: #4a90e2;
   outline: none;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #0d6efd;
-  color: white;
+#addBtn {
+  padding: 10px 20px;
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
+  background: #4a90e2;
+  color: white;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
 }
 
-button:hover {
-  background-color: #0b5ed7;
+#addBtn:hover {
+  background: #357ABD;
 }
 
-
-input:invalid, textarea:invalid {
-  border-color: #dc3545;
+ul {
+  list-style: none;
+  margin-top: 20px;
 }
 
-input:valid, textarea:valid {
-  border-color: #198754;
+li {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
 }
 
+li:hover {
+  background: #f0f0f0;
+}
 
+li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
 
+button.delete {
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+button.delete:hover {
+  background: #e04e4e;
+}
